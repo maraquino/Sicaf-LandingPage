@@ -1,96 +1,108 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    color: #FFFFFF;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 300;
 }
 
-header {
-    background-color: #232C4B;
-    color: white;
+#logo {
+    width: 500px;
 }
 
-#logo{
-    max-width: 100%;
+#intro {
+    height: 100vh;
+    background-color: #E6BB5F;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-#hero{
-    max-width: 100%;
-}
-
-#beneficioYContacto{
-    background-color: #159EE8;
+.slogan {
     color: #232C4B;
 }
 
-.form-contacto{
-    background-color: white;
+.btn-descubre-mas {
+    background-color: #159EE8;
+    color: white;
+    border: none;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
 }
 
+.btn-descubre-mas:hover {
+    background-color: #232C4B;
+    color: white;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
 
-/*
-h1 {
-    font-size: 2.5rem;
+.btn-solicitar-demo {
+    background-color: #232C4B;
+    color: white;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.btn-solicitar-demo:hover {
+    background-color: #E6BB5F;
+    color: white;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#hero {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+#beneficioYContacto {
+    height: 100vh;
+    background-color: #159EE8;
+}
+
+.form-contacto {
+    background-color: white;
+    padding-top: 0 !important;
+}
+
+#caracteristicas {
+    height: 100vh;
+    background-color: #232C4B;
+    color: #f4f4f4;
+}
+
+.icon-text i {
+    width: 40px;
+    margin-right: 15px;
+    font-size: 2rem;
+    text-align: center;
+    color: #232C4B;
+}
+
+.img-caracteristicas img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: #E6BB5F 6px solid;
 }
 
 h2 {
-    font-size: 1.8rem;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 900;
 }
 
-p {
-    font-size: 1rem;
+h3, h4 {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
 }
-
-.button {
-    display: inline-block;
-    background-color: #ff6f61;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-section {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-}
-
-#contacto form {
-    display: flex;
-    flex-direction: column;
-}
-
-#contacto label {
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-#contacto input, #contacto select, #contacto textarea {
-    margin-bottom: 15px;
-    padding: 10px;
-    font-size: 1rem;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#contacto button {
-    padding: 10px;
-    background-color: #0066cc;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#contacto button:hover {
-    background-color: #004a99;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-} */
