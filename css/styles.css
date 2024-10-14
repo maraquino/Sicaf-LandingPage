@@ -1,59 +1,67 @@
+:root {
+    --primary-color: #232C4B;
+    --secondary-color: #E6BB5F;
+    --accent-color: #159EE8;
+    --text-light: #f4f4f4;
+    --text-dark: #232C4B;
+}
+
+
 body {
     margin: 0;
     padding: 0;
-    color: #FFFFFF;
+    color: var(--text-light);
     font-family: 'Archivo', sans-serif;
     font-weight: 300;
 }
 
+
 #logo {
-    width: 500px;
+    width: 30%;
 }
+
 
 #intro {
     height: 100vh;
-    background-color: #E6BB5F;
+    background-color: var(--secondary-color);
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .slogan {
-    color: #232C4B;
+    color: var(--text-dark);
 }
 
 .btn-descubre-mas {
-    background-color: #159EE8;
+    background-color: var(--accent-color);
     color: white;
     border: none;
     font-family: 'Archivo', sans-serif;
     font-weight: 600;
     font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-descubre-mas:hover {
-    background-color: #232C4B;
+    background-color: var(--primary-color);
     color: white;
-    font-family: 'Archivo', sans-serif;
-    font-weight: 600;
-    font-size: 18px;
 }
 
 .btn-solicitar-demo {
-    background-color: #232C4B;
+    background-color: var(--primary-color);
     color: white;
     font-family: 'Archivo', sans-serif;
     font-weight: 600;
     font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-solicitar-demo:hover {
-    background-color: #E6BB5F;
+    background-color: var(--secondary-color);
     color: white;
-    font-family: 'Archivo', sans-serif;
-    font-weight: 600;
-    font-size: 18px;
 }
+
 
 #hero {
     width: 100vw;
@@ -65,9 +73,12 @@ body {
     border: none;
 }
 
+
 #beneficioYContacto {
-    height: 100vh;
-    background-color: #159EE8;
+    position: relative;
+    z-index: 1;
+    background-color: var(--accent-color);
+    padding-bottom: 3rem;
 }
 
 .form-contacto {
@@ -75,10 +86,12 @@ body {
     padding-top: 0 !important;
 }
 
+
 #caracteristicas {
-    height: 100vh;
-    background-color: #232C4B;
-    color: #f4f4f4;
+    position: relative;
+    z-index: 0;
+    background-color: var(--primary-color);
+    padding: 3rem 0;
 }
 
 .icon-text i {
@@ -86,16 +99,19 @@ body {
     margin-right: 15px;
     font-size: 2rem;
     text-align: center;
-    color: #232C4B;
+    color: var(--primary-color);
 }
+
 
 .img-caracteristicas img {
     width: 300px;
     height: 300px;
     object-fit: cover;
     border-radius: 50%;
-    border: #E6BB5F 6px solid;
+    border: var(--secondary-color) 6px solid;
+    margin-bottom: 1rem;
 }
+
 
 h2 {
     font-family: 'Archivo', sans-serif;
@@ -106,3 +122,72 @@ h3, h4 {
     font-family: 'Archivo', sans-serif;
     font-weight: 600;
 }
+
+/* Media Queries para la responsividad */
+
+
+@media (max-width: 768px) {
+    #logo {
+        width: 50%;
+    }
+
+    #intro, #beneficioYContacto {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .slogan h2 {
+        font-size: 1.5rem;
+    }
+
+    .btn-descubre-mas {
+        font-size: 16px;
+    }
+
+    #hero {
+        height: 50vh;
+    }
+
+    #beneficioYContacto {
+        padding-top: 2rem;
+        flex-direction: column;
+    }
+
+    .form-contacto {
+        margin-top: 2rem;
+    }
+
+    .img-caracteristicas img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .icon-text i {
+        font-size: 1.5rem;
+    }
+
+    .contacto {
+        margin-top: 30px;
+    }
+}
+
+
+@media (max-width: 992px) {
+    #logo {
+        width: 40%;
+    }
+
+    .slogan h2 {
+        font-size: 2rem;
+    }
+
+    .btn-descubre-mas {
+        font-size: 17px;
+    }
+
+    .img-caracteristicas img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
