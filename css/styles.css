@@ -17,37 +17,44 @@ body {
 
 
 #logo {
-    width: 30%;
+    width: 700px; /* Aumentar el tamaño del logo */
+    margin-bottom: 180px; /* Espacio entre el logo y el texto */
+    display: block;
+    margin-left: 145px;
 }
 
-/*
-#intro {
-    height: 100vh;
-    background-color: var(--secondary-color);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}*/
 
 #intro {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100vh; /* Asegura que la sección de introducción ocupe toda la altura */
+    height: 100vh;
     background-color: #E6BB5F;
 }
 
-/*
 .slogan {
-    color: var(--text-dark);
-}*/
+    display: flex;
+    flex-direction: column; /* Alinear el contenido verticalmente */
+    justify-content: flex-start;
+    padding-left: 20px; /* Mantener alineación con el logo */
+}
 
-.slogan {
-    flex: 1; /* Asegura que el texto ocupe su espacio correspondiente */
-    padding: 2rem;
+.slogan h2 {
+    margin-top: 0; /* Sin espacio superior adicional */
+    margin-bottom: 10px; /* Espacio entre el título y el párrafo */
+    color: #232C4B;
+    font-size: 3rem;
+}
+
+.slogan p {
+    margin-top: 0; /* Sin margen superior adicional */
+    margin-bottom: 20px; /* Espacio entre el párrafo y el botón */
+    color: #232C4B;
+    font-size: 2rem;
 }
 
 .btn-descubre-mas {
+    margin-top: 20px; /* Espacio superior al botón */
     background-color: var(--accent-color);
     color: white;
     border: none;
@@ -76,29 +83,23 @@ body {
     color: white;
 }
 
-/*
-#hero {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    display: block;
-    padding: 0;
-    margin: 0;
-    border: none;
-}*/
+.form-label{
+    color: #232C4B;
+}
 
 #hero {
     width: 100%;
-    height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
-    object-fit: cover; /* Ajusta la imagen para cubrir el área sin deformarla */
+    height: 100vh;
+    object-fit: cover;
 }
 
 
 #beneficioYContacto {
-    position: relative;
-    z-index: 1;
     background-color: var(--accent-color);
-    padding-bottom: 3rem;
+    min-height: 100vh; /* Asegura que la sección ocupe al menos el 100% de la altura de la pantalla */
+    display: flex;
+    align-items: center;
+    padding-bottom: 50px; /* Añadir algo de padding para que no quede muy ajustado */
 }
 
 .form-contacto {
@@ -133,10 +134,10 @@ body {
 }
 
 .img-fluid.hero-image {
-    flex: 1; /* Asegura que la imagen también ocupe la mitad del espacio */
+    flex: 1;
     width: 100%;
-    height: 100%; /* Asegura que la imagen rellene su contenedor */
-    object-fit: cover; /* Ajusta la imagen para rellenar el área de la derecha sin perder proporción */
+    height: 100%;
+    object-fit: cover;
 }
 
 h2 {
@@ -218,34 +219,31 @@ h3, h4 {
 }
 
 @media (max-width: 576px) {
-    /* Ajuste general para columnas en pantallas pequeñas */
     #intro, #beneficioYContacto, #caracteristicas {
-        flex-direction: column; /* Asegura que el contenido se alinee en columna */
+        flex-direction: column;
     }
 
     #logo {
-        width: 50%; /* Ajusta el tamaño del logo en móviles */
-        margin: 0 auto; /* Centra el logo */
+        width: 50%;
+        margin: 0 auto;
     }
 
-    /* Alineación y tamaños para textos en pantallas pequeñas */
     .slogan h2 {
-        font-size: 1.2rem; /* Reduce el tamaño del texto del slogan */
-        text-align: center; /* Centra el texto */
+        font-size: 1.2rem;
+        text-align: center;
     }
 
     .slogan p {
-        font-size: 0.9rem; /* Ajusta el tamaño de la descripción */
-        text-align: center; /* Centra el texto */
+        font-size: 0.9rem;
+        text-align: center;
     }
 
     .btn-descubre-mas {
         display: block;
-        margin: 10px auto; /* Centra el botón */
-        width: 80%; /* Ajusta el ancho del botón */
+        margin: 10px auto;
+        width: 80%;
     }
 
-    /* Ajustes del formulario y beneficios */
     #beneficioYContacto {
         padding: 1rem;
     }
@@ -254,7 +252,6 @@ h3, h4 {
         margin-top: 20px;
     }
 
-    /* Ajustar las imágenes del hero para que no ocupen mucho espacio */
     #hero {
         width: 100%;
         height: auto;
@@ -262,25 +259,22 @@ h3, h4 {
     }
 
     .contacto h2 {
-        font-size: 1.5rem; /* Ajustar tamaño del título del formulario */
+        font-size: 1.5rem;
     }
 
     .form-contacto {
         padding: 1rem;
     }
 
-    /* Ajustes para las características */
     .img-caracteristicas img {
         width: 150px;
         height: 150px;
     }
 
-    /* Asegurar que las características y beneficios estén en columna */
     .row {
         flex-direction: column;
     }
 
-    /* Centrar y ajustar el texto en las características */
     .caracteristicas .row .col-md-4 {
         margin-bottom: 2rem;
     }
