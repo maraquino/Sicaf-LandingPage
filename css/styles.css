@@ -20,17 +20,31 @@ body {
     width: 30%;
 }
 
-
+/*
 #intro {
     height: 100vh;
     background-color: var(--secondary-color);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}*/
+
+#intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh; /* Asegura que la sección de introducción ocupe toda la altura */
+    background-color: #E6BB5F;
 }
 
+/*
 .slogan {
     color: var(--text-dark);
+}*/
+
+.slogan {
+    flex: 1; /* Asegura que el texto ocupe su espacio correspondiente */
+    padding: 2rem;
 }
 
 .btn-descubre-mas {
@@ -62,7 +76,7 @@ body {
     color: white;
 }
 
-
+/*
 #hero {
     width: 100vw;
     height: 100vh;
@@ -71,6 +85,12 @@ body {
     padding: 0;
     margin: 0;
     border: none;
+}*/
+
+#hero {
+    width: 100%;
+    height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+    object-fit: cover; /* Ajusta la imagen para cubrir el área sin deformarla */
 }
 
 
@@ -112,6 +132,12 @@ body {
     margin-bottom: 1rem;
 }
 
+.img-fluid.hero-image {
+    flex: 1; /* Asegura que la imagen también ocupe la mitad del espacio */
+    width: 100%;
+    height: 100%; /* Asegura que la imagen rellene su contenedor */
+    object-fit: cover; /* Ajusta la imagen para rellenar el área de la derecha sin perder proporción */
+}
 
 h2 {
     font-family: 'Archivo', sans-serif;
